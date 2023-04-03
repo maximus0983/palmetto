@@ -1,0 +1,10 @@
+spring:
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: "pizza"
+
+topic:
+  name: t.food.notification
+#  receive:
+#    name: t.food.order

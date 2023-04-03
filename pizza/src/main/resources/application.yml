@@ -1,0 +1,25 @@
+spring:
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: "pizza"
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+#      value-deserializer: org.springframework.kafka.support.serializer.ErrorHandlingDeserializer
+#      properties:
+#        spring:
+#          json:
+#            type:
+#              mapping:
+#                order: com.epam.client.model.Order, com.epam.pizza.model.Order
+#            trusted:
+#              packages: '*'
+#          deserializer:
+#            value:
+#              delegate:
+#                class: org.springframework.kafka.support.serializer.JsonDeserializer
+
+topic:
+  send:
+    name: t.food.notification
+  receive:
+    name: t.food.order

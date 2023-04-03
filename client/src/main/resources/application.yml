@@ -1,0 +1,32 @@
+server:
+  port: 8081
+
+spring:
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: "client"
+  datasource:
+    url: jdbc:mysql://localhost:3306/pizzeria
+    username: max
+    password: 1111
+  jpa:
+    hibernate:
+      use-new-id-generator-mappings: false
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    properties:
+      show_sql: true
+
+topic:
+  send:
+    name: t.food.order
+  receive:
+    name: t.food.notification
+
+
+logging:
+  level:
+    org:
+      hibernate:
+        type=trace:
